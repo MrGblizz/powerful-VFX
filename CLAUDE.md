@@ -1,4 +1,4 @@
-# [NOM] — guide du projet
+# Powerful-VFX — guide du projet
 
 ## But
 Bibliothèque Fabric (Minecraft 26.3, Java 25, mappings Mojang) qui dessine des **auras** autour

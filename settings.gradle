@@ -1,0 +1,20 @@
+// Où Gradle doit chercher les PLUGINS (comme Loom). Ce bloc doit être tout en haut du fichier :
+// Gradle le lit avant le reste, car il a besoin des plugins avant de lire les build.gradle.
+pluginManagement {
+    repositories {
+        // Dépôt de Fabric : c'est là que se trouve le plugin Loom.
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        // Deux dépôts standards, pour les plugins et bibliothèques courants.
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+// Nom du projet racine (la bibliothèque).
+rootProject.name = 'powerful-VFX'
+
+// Déclare le sous-projet « testmod » (le dossier testmod/). Il aura son propre build.gradle.
+include 'testmod'
