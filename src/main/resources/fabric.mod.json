@@ -1,0 +1,20 @@
+{
+	"schemaVersion": 1,
+	"id": "powerful_vfx",
+	"version": "${version}",
+	"name": "Powerful-VFX",
+	"description": "Bibliothèque d'auras et d'effets visuels pour les développeurs de mods.",
+	"authors": ["Mathéo Glessmer"],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["io.github.mrgblizz.powerfulvfx.PowerfulVfx"],
+		"client": ["io.github.mrgblizz.powerfulvfx.client.PowerfulVfxClient"]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"schemaVersion": 1,
+	"id": "powerful_vfx_test",
+	"version": "${version}",
+	"name": "Powerful-VFX Test",
+	"description": "Mod de test de la bibliothèque. Non livré.",
+	"authors": ["Mathéo Glessmer"],
+	"license": "All Rights Reserved",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["io.github.mrgblizz.powerfulvfx.testmod.TestMod"]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"powerful_vfx": "*"
+	}
+}

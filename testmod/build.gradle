@@ -1,0 +1,28 @@
+plugins {
+    id 'net.fabricmc.fabric-loom'
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+    implementation project(':')
+}
+
+processResources {                          // « pendant la copie des ressources… »
+    inputs.property "version", project.version   // « …si la version change, refais la copie »
+    filesMatching("fabric.mod.json") {      // « …pour ce fichier précis… »
+        expand "version": project.version   // « …remplace ${version} par la vraie version »
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 25
+}
+
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
